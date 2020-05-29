@@ -14,7 +14,7 @@ There are components.
 
 4. generate_token.py - a tool to generate Google Analytics token.
 
-5. <any name>.json - Google analytics service account key file created in Google Analytics Platform APIs and Services.  
+5. [any name].json - Google analytics service account key file created in Google Analytics Platform APIs and Services.  
 
 ## Generate Google Analytics token usage
 
