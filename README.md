@@ -42,7 +42,7 @@ generate_token.py -k tech-jogging-blog-98stj21aac52.json -t report_access.js
 
 1. Generate a token. It's live for 1 hour.
 2. Publish 3 files to a web server.
-   1. how_pageviews.html
+   1. show_pageviews.html
    2. pageviews.js
    3. report_access.js
 3. Open show_pageviews.html page. 
