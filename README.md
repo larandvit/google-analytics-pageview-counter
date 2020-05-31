@@ -47,4 +47,8 @@ generate_token.py -k tech-jogging-blog-98stj21aac52.json -t report_access.js
    3. report_access.js
 3. Open show_pageviews.html page. 
 4. If you need to keep it running, renew the token every hour.
+
+## Documentation
+
+[Add Google Analytics Pageviews in Static Web Site](https://techjogging.com/add-google-analytics-pageviews-static-web-site.html)
   
