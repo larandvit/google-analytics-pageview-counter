@@ -31,12 +31,20 @@ optional arguments:
                         Google Analytics token destination path
 ``` 
 
-Sample of usage
+Sample of usage in CentOS 8 where the tool and service account file located in /opt/generate_token folder and web site in /var/www/sample.com folder
 
 
 ```bash
-generate_token.py -k tech-jogging-blog-98stj21aac52.json -t report_access.js
+python3 /opt/generate_token/generate_token.py -k /opt/generate_token/tech-jogging-blog-98stj21aac52.json -t /var/www/sample.com/report_access.js
 ``` 
+
+## Prerequisites
+
+1. Install Pyhon library
+
+```bash
+sudo pip3 install oauth2client
+```
 
 ## How to run it
 
@@ -47,6 +55,38 @@ generate_token.py -k tech-jogging-blog-98stj21aac52.json -t report_access.js
    3. report_access.js
 3. Open show_pageviews.html page. 
 4. If you need to keep it running, renew the token every hour.
+
+## Set up to renew token every 59 minutes
+
+1. Switch to root account.
+
+```bash
+sudo su
+```
+
+2. Open `crontab` editor.
+
+```bash
+crontab -e
+```
+
+3. Add the command item.
+
+```
+59 * * * * python3 /opt/generate_token/generate_token.py -k /opt/generate_token/tech-jogging-blog-98stj21aac52.json -t /var/www/sample.com/report_access.js
+```
+
+It can be optimized by creating a shell script in `launcher.sh` file and placing the command in the shell file. In that case, the time item is.
+
+```
+59 * * * * python3 /opt/generate_token/launcher.sh
+```
+
+4. Validate your setup.
+
+```bash
+crontab -l
+```
 
 ## Documentation
 
