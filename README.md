@@ -76,7 +76,7 @@ crontab -e
 59 * * * * python3 /opt/generate_token/generate_token.py -k /opt/generate_token/tech-jogging-blog-98stj21aac52.json -t /var/www/sample.com/report_access.js
 ```
 
-It can be optimized by creating a shell script file, for example, 'launcher.sh` and placing the command in the shell file. In that case, the command item is.
+It can be optimized by creating a shell script file, for example, `launcher.sh` and placing the command in the shell file. In that case, the command item is.
 
 ```
 59 * * * * python3 /opt/generate_token/launcher.sh
