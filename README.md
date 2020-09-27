@@ -31,7 +31,7 @@ optional arguments:
                         Google Analytics token destination path
 ``` 
 
-Sample of usage in CentOS 8 where the tool and service account file located in /opt/generate_token folder and web site in /var/www/sample.com folder
+Sample of usage in CentOS 8 where the tool and service account file located in `/opt/generate_token` folder and web site in `/var/www/sample.com` folder
 
 
 ```bash
@@ -76,7 +76,7 @@ crontab -e
 59 * * * * python3 /opt/generate_token/generate_token.py -k /opt/generate_token/tech-jogging-blog-98stj21aac52.json -t /var/www/sample.com/report_access.js
 ```
 
-It can be optimized by creating a shell script in `launcher.sh` file and placing the command in the shell file. In that case, the time item is.
+It can be optimized by creating a shell script file, for example, 'launcher.sh` and placing the command in the shell file. In that case, the command item is.
 
 ```
 59 * * * * python3 /opt/generate_token/launcher.sh
